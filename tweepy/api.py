@@ -307,7 +307,7 @@ class API:
         )(*args, **kwargs)
 
         # If a media ID has been generated, we can send the file
-        if media_info.media_id:
+        if "media_id" in media_info:
             chunk_size = kwargs.pop('chunk_size', DEFAULT_CHUNKSIZE)
             chunk_size = max(min(chunk_size, MAX_CHUNKSIZE), MIN_CHUNKSIZE)
 
