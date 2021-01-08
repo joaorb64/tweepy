@@ -1578,8 +1578,8 @@ class API:
             fp.seek(0, 2)  # Seek to end of file
             file_size = fp.tell()
 
-            if file_size > (MAX_UPLOAD_SIZE_CHUNKED * 1024):
-                raise TweepError('File is too big, must be less than %s KiB.' % MAX_UPLOAD_SIZE_CHUNKED)
+            #if file_size > (MAX_UPLOAD_SIZE_CHUNKED * 1024):
+            #    raise TweepError('File is too big, must be less than %s KiB.' % MAX_UPLOAD_SIZE_CHUNKED)
 
             fp.seek(0)  # Reset to beginning of file
 
