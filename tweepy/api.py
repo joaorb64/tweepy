@@ -321,7 +321,7 @@ class API:
                     file_type=file_type,
                     chunk_size=chunk_size,
                     f=fp,
-                    media_id=media_info.media_id,
+                    media_id=media_info["media_id"],
                     segment_index=i,
                     is_direct_message=is_direct_message
                 )
@@ -343,7 +343,7 @@ class API:
                 'finalize',
                 filename,
                 file_type=file_type,
-                media_id=media_info.media_id,
+                media_id=media_info["media_id"],
                 is_direct_message=is_direct_message
             )
             kwargs = {'headers': headers, 'post_data': post_data}
