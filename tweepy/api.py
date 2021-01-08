@@ -244,8 +244,8 @@ class API:
         size_bytes = os.path.getsize(filename)
 
         if file_type in IMAGE_TYPES or file_type in CHUNKED_TYPES:
-            if size_bytes > MAX_UPLOAD_SIZE_CHUNKED * 1024:
-                raise TweepError('Media files must be smaller than {} kb'.format(MAX_UPLOAD_SIZE_CHUNKED))
+            #if size_bytes > MAX_UPLOAD_SIZE_CHUNKED * 1024:
+            #    raise TweepError('Media files must be smaller than {} kb'.format(MAX_UPLOAD_SIZE_CHUNKED))
 
             if file_type in IMAGE_TYPES and size_bytes < MAX_UPLOAD_SIZE_STANDARD * 1024:
                 return self.image_upload(filename, MAX_UPLOAD_SIZE_STANDARD * 1024, file_type=file_type, f=f, *args, **kwargs)
